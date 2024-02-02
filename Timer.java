@@ -1,5 +1,5 @@
 
- class Timer {
+ public class Timer {
     //ゲーム開始の合図をするタイマーメソッド
     public void timer(){
         try{

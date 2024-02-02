@@ -5,8 +5,8 @@ import java.util.InputMismatchException;
 
 class Gamestart implements QuestionNumber{
     Scanner stdIn = new Scanner(System.in);
-    int mode;
-    int level;
+    public int mode;
+    protected int level;
     
     @Override public void ModeSelect(){
       System.out.println("タイピングゲームを開始します。\nspaceはすべて全角です。");
@@ -26,7 +26,6 @@ class Gamestart implements QuestionNumber{
             System.out.println("1~3の整数で入力してください");
             ModeSelect();
          }
-         System.out.println(level);
       }catch(InputMismatchException e){
          System.out.println("1~3の整数で入力してください");
          ModeSelect();

@@ -30,16 +30,29 @@ class TypingGame extends Gamestart {
 
         System.out.println("あなたのスコアは" + score + "点でした。\nもう一度プレイしますか？");
         System.out.print("1 = プレイする or 2 = プレイしない :");
-        try{
-          int re = stdIn.nextInt();
-          if(re == 1){
-            typinggame();
-          }
-          else{
-          System.out.println("お疲れさまでした");
-          }
-        }catch(InputMismatchException e){
-          System.out.println("お疲れさまでした");
+        
+        Restart();
+        
+        
+        
+    }
+
+    private void Restart(){
+      try{
+        int re = stdIn.nextInt();
+        if(re == 1){
+          typinggame();
         }
+        else if(re == 2){
+        System.out.println("お疲れさまでした");
+        }
+        else{
+          System.out.println("正しい値を入力してください！");
+          Restart();
+        }
+      }catch(InputMismatchException e){
+        System.out.println("正しい値を入力してください！");
+        Restart();
+      }
     }
 }          
