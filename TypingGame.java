@@ -8,8 +8,11 @@ class TypingGame extends Gamestart {
     Gamestart gm = new Gamestart();
     Wordlist wl = new Wordlist();
     Scanner stdIn = new Scanner(System.in);
+    Timer time = new Timer();
 
     public void typinggame(){
+        gm.ModeSelect();
+        time.timer();
         int score = 0;
         for(int i = 0; i<gm.level; i++){
           wl.setWord();
@@ -26,14 +29,14 @@ class TypingGame extends Gamestart {
         }
 
         System.out.println("あなたのスコアは" + score + "点でした。\nもう一度プレイしますか？");
-        System.out.print("YES or NO :");
+        System.out.print("1 = プレイする or 2 = プレイしない :");
         try{
-          String re = stdIn.next();
-          if(re == "YES"){
+          int re = stdIn.nextInt();
+          if(re == 1){
             typinggame();
           }
           else{
-            System.out.println("お疲れさまでした");
+          System.out.println("お疲れさまでした");
           }
         }catch(InputMismatchException e){
           System.out.println("お疲れさまでした");

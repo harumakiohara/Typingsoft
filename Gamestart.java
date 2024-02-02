@@ -9,6 +9,7 @@ class Gamestart implements QuestionNumber{
     int level;
     
     @Override public void ModeSelect(){
+      System.out.println("タイピングゲームを開始します。\nspaceはすべて全角です。");
       System.out.print("NOMAL = 1 / HARD = 2 / VERY HARD = 3\n難易度を選択してください:");
       try{   
          mode = stdIn.nextInt();
