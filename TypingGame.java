@@ -25,7 +25,7 @@ class TypingGame extends Gamestart {
           wl.setWord();
           System.out.println(" 「" + wl.getWordR() + "」 ");
           
-          //テキストを入力＊＊＊ここで入力した文字型が文字化けしてしまうバグがまだ直せていません
+          //テキストを入力＊＊＊ターミナルで実行するとここで入力した文字型が文字化けします
           String input = stdIn.next();
           System.out.println(input);//デバッグ用print
           

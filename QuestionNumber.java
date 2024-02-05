@@ -4,7 +4,7 @@ public interface QuestionNumber {
     public int nomal = 10;
     public int hard = 20;
     public int veryhard = 30; 
-    
+
     //難易度を指定するModeSelectメソッド
     void ModeSelect();
 } 
