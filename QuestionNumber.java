@@ -7,4 +7,5 @@ public interface QuestionNumber {
 
     //難易度を指定するModeSelectメソッド
     void ModeSelect();
+
 } 

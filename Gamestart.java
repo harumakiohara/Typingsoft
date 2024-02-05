@@ -5,8 +5,8 @@ import java.util.InputMismatchException;
 //ゲーム開始時に難易度を設定するクラス
 class Gamestart implements QuestionNumber{
     Scanner stdIn = new Scanner(System.in);
-    public int mode;
-    public int level;
+    private int mode;
+    private int level;
     
     //難易度を指定するModeSelectメソッドをオーバーライド
     @Override public void ModeSelect(){
@@ -39,4 +39,9 @@ class Gamestart implements QuestionNumber{
          ModeSelect();
       }
     }
+    
+    //ゲッターメソッド
+    public Integer GetLevel(){
+      return level;
+    } 
 }

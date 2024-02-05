@@ -20,7 +20,7 @@ class TypingGame extends Gamestart {
         
         //タイピングゲームを実行する処理
         int score = 0;
-        for(int i = 0; i<gm.level; i++){
+        for(int i = 0; i<gm.GetLevel(); i++){
           //お題となるランダムな短歌を出力して表示
           wl.setWord();
           System.out.println(" 「" + wl.getWordR() + "」 ");
