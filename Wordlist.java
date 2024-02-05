@@ -3,6 +3,7 @@ import java.util.Random;
 
 //問題を格納したwordlistリストを持つクラス
 public class Wordlist{
+    //単語を格納するリストwordlist
     private String[] wordlist = {
         "春すぎて　夏来にけらし　白妙の　衣ほすてふ　天の香具山",
         "夏の夜は　まだ宵ながら　明けぬるを　雲のいづこに　月宿るらむ",
@@ -21,17 +22,23 @@ public class Wordlist{
         "しのぶれど　色に出でにけり　わが恋は　物や思ふと　人の問ふまで",
     };
 
+    //お題となるランダムな整数を代入する変数word
     private String word;
-
+    
+    //wordlistの単語の中からランダムな単語を変数wordに代入するメソッド
     public void setWord(){
-         int set = new Random().nextInt(getWordL());
-         this.word = wordlist[set];
+        //wordlistの長さを参照しランダムな番号を変数setに代入 
+        int set = new Random().nextInt(getWordL());
+        //変数setの番号の位置にある単語を変数wordに代入
+        this.word = wordlist[set];
     }
-
+    
+    //変数wordを返すメソッド
     public String getWordR(){
         return word;
     }
-
+    
+    //wordlistの長さを返すメソッド
     public int getWordL(){
         return wordlist.length;
     }
