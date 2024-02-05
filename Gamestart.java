@@ -6,7 +6,7 @@ import java.util.InputMismatchException;
 class Gamestart implements QuestionNumber{
     Scanner stdIn = new Scanner(System.in);
     public int mode;
-    protected int level;
+    public int level;
     
     //難易度を指定するModeSelectメソッドをオーバーライド
     @Override public void ModeSelect(){
